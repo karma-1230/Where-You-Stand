@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Where You Stand</h1>
+        <nav class="navigation">
+            <a href="about">About</a>
+            <button type="button" class="btnlogin">Calculate</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Calculate</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="paw-outline"></ion-icon></span>
+                    <input type="text" name="assignment" required>
+                    <label>assignment</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="heart-half-outline"></ion-icon></span>
+                    <input type="text" name="quiz" required>
+                    <label>quiz</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="headset-outline"></ion-icon></span>
+                    <input type="text" name="mids" required>
+                    <label>mids</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="git-network-outline"></ion-icon></span>
+                    <input type="text" name="finals" required>
+                    <label>finals</label>
+                </div>
+                <button class="btn" type="submit">Calculate</button>
+                <div class="register">
+                    <p>Dont know your Finals Marks?<a href="#" class="register-link">Desired Gpa</a> </p>
+                </div>
+                <div class="register">
+                    <p>Subject has Lab?<a href="#" class="lab-link">Lab Subject</a> </p>
+                </div>
+                <div class="register">
+                    <p>Dont know your Finals Marks?<a href="#" class="dlab-link">Lab Desired Gpa</a> </p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="paw-outline"></ion-icon></span>
+                    <input type="text" name="assignment" required>
+                    <label>assignment</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="heart-half-outline"></ion-icon></span>
+                    <input type="text" name="quiz" required>
+                    <label>quiz</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="headset-outline"></ion-icon></span>
+                    <input type="text" name="mids" required>
+                    <label>mids</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="sparkles-outline"></ion-icon></span>
+                    <input type="text" name="desired_gpa" required>
+                    <label>Desired Gpa</label>
+                </div>
+                <button class="btn" type="submit">Calculate</button>
+                <div class="login">
+                    <p>Do know your Finals Marks?<a href="#" class="login-link">Calculate Gpa</a> </p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box lab">
+            <h2>Calculate</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="paw-outline"></ion-icon></span>
+                    <input type="text" name="assignment" required>
+                    <label>assignment</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="heart-half-outline"></ion-icon></span>
+                    <input type="text" name="quiz" required>
+                    <label>quiz</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="headset-outline"></ion-icon></span>
+                    <input type="text" name="mids" required>
+                    <label>mids</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="git-network-outline"></ion-icon></span>
+                    <input type="text" name="finals" required>
+                    <label>finals</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="moon-outline"></ion-icon></span>
+                    <input type="text" name="lab-assg" required>
+                    <label>Lab Assignment</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="pizza-outline"></ion-icon></span>
+                    <input type="text" name="lab-mid" required>
+                    <label>Lab Mid</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="phone-portrait-outline"></ion-icon></span>
+                    <input type="text" name="lab-final" required>
+                    <label>Lab Final</label>
+                </div>
+                <button class="btn" type="submit">Calculate</button>
+                <div class="register">
+                    <p>Subject doesn't have Lab?<a href="#" class="theory-link">Subject</a> </p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box Dlab">
+            <h2>Calculate</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="paw-outline"></ion-icon></span>
+                    <input type="text" name="assignment" required>
+                    <label>assignment</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="heart-half-outline"></ion-icon></span>
+                    <input type="text" name="quiz" required>
+                    <label>quiz</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="headset-outline"></ion-icon></span>
+                    <input type="text" name="mids" required>
+                    <label>mids</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="moon-outline"></ion-icon></span>
+                    <input type="text" name="lab-assg" required>
+                    <label>Lab Assignment</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="pizza-outline"></ion-icon></span>
+                    <input type="text" name="lab-mid" required>
+                    <label>Lab Mid</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="phone-portrait-outline"></ion-icon></span>
+                    <input type="text" name="lab-final" required>
+                    <label>Lab Final</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="git-network-outline"></ion-icon></span>
+                    <input type="text" name="desired_gpa" required>
+                    <label>Desired GPA</label>
+                </div>
+                <button class="btn" type="submit">Calculate</button>
+                <div class="register">
+                    <p>Know Your Subject Marks?<a href="#" class="dlabno-link">Subject</a> </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

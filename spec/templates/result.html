@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Where You Stand</h1>
+        <nav class="navigation">
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'index' %}">Calculate</a>
+            <button type="button" class="btnlogin">Results</button>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="content-box">
+            <h2>How it works</h2>
+            <div class="info-box">
+                {% if gpa is not None %}
+                    <p><span class="bold-text">Your GPA:</span></p>
+                    <p class="gpa">{{ gpa }}</p>
+                    {% if gpa > 2.5 %}
+                        <p>Good Job getting 2.5 or higher!!</p><p> When am I getting a treat?</p>
+                    {% else %}
+                        <p>Your GPA is below 2.5.</p><p> Consider seeking academic advice.</p>
+                    {% endif %}
+                {% else %}
+                    <p><span class="bold-text">You Need:</span></p>
+                    <p class="need">{{ finals }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
